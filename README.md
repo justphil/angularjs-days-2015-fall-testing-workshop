@@ -1,2 +1,4 @@
 # angularjs-days-2015-fall-testing-workshop
-Repo für den AngularJS Testing Workshop auf den AngularJS Days 2015 (Fall, Oktober)
+
+In einem echten Projekt würde man den Ordner `node_modules` **nicht** mit einchecken. Dies wurde hier nur gemacht, um
+den Teilnehmern/Teilnehmerinnen die Einrichtung eines funktionierenden Projektes zu erleichtern.
