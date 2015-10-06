@@ -13,6 +13,14 @@
             <td><a ng-href="#/books/{{book.isbn}}" ng-bind="book.title"></a></td>
             <td ng-bind="book.author"></td>
             <td ng-bind="book.isbn"></td>
+            <td><button ng-click="deleteBook(book)">Delete</button></td>
         </tr>
     </tbody>
 </table>
+
+<message-dialog visible="dialogVisible"
+                title="dialogTitle"
+                on-yes="performDeletion()"
+                on-no="cancelDeletion()">
+    Wollen Sie das Buch <strong>{{bookToDelete.title}}</strong> wirklich löschen?
+</message-dialog>

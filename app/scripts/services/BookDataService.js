@@ -38,9 +38,29 @@ angular.module('ajsDaysApp').factory('BookDataService', function() {
         }
     }
 
+    function deleteBookByIsbn(isbn) {
+        var indexToDelete = -1,
+            i = _books.length;
+
+        while (i--) {
+            if (isbn === _books[i].isbn) {
+                indexToDelete = i;
+                break;
+            }
+        }
+
+        if (indexToDelete != -1) {
+            _books.splice(indexToDelete, 1);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     // revealing module object
     return {
         getBooks: getBooks,
-        getBookByIsbn: getBookByIsbn
+        getBookByIsbn: getBookByIsbn,
+        deleteBookByIsbn: deleteBookByIsbn
     };
 });
