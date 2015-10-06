@@ -1,5 +1,6 @@
 <h1>Books</h1>
 
+<input type="text" class="form-control" ng-model="searchText"/>
 <table class="table">
     <thead>
         <tr>
@@ -9,7 +10,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="book in books">
+        <tr ng-repeat="book in books | filter:searchText">
             <td><a ng-href="#/books/{{book.isbn}}" ng-bind="book.title"></a></td>
             <td ng-bind="book.author"></td>
             <td ng-bind="book.isbn"></td>
