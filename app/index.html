@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="ajsDaysApp">
 <head>
   <meta charset="utf-8">
   <title>myApp</title>
@@ -13,13 +13,17 @@
 </head>
 <body>
 
-  <h1>Hello World!</h1>
+  <div ng-view></div>
 
   <!-- 3rd-Party Libs -->
   <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
 
   <!-- Application Files -->
-
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/BooksCtrl.js"></script>
+  <script src="scripts/controllers/BookDetailsCtrl.js"></script>
+  <script src="scripts/_configs/routeConfig.js"></script>
 
 </body>
 </html>
